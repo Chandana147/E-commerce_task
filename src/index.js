@@ -1,4 +1,4 @@
-// Fetch all the radio buttons
+// Fetching all the radio buttons
 const radioButtons = document.querySelectorAll(
     '.option-content input[type="radio"]'
 );
@@ -6,25 +6,25 @@ const boxes = document.querySelectorAll(".product-box");
 
 // Function to handle the radio button selection
 function handleRadioClick(event) {
-    // Hide all .reveal-if-active divs
+    // Hiding all .reveal-if-active divs
     const revealDivs = document.querySelectorAll(".reveal-if-active");
     revealDivs.forEach((div) => {
         div.classList.remove("visible");
-        // While iterating through all the revealDivs, remove the selected class from their parent boxes
+        // While iterating through all the revealDivs.
         div.closest(".product-box").classList.remove("selected");
     });
 
-    // Show the .reveal-if-active div associated with the clicked radio button
+    // Showing the .reveal-if-active div associated with the clicked radio button
     const parentBox = event.target.closest(".product-box");
 
     if (parentBox) {
         const revealDiv = parentBox.querySelector(".reveal-if-active");
         revealDiv.classList.add("visible");
 
-        // Also, add the selected class to the box containing the radio that was clicked
+        //Selected class to the box containing the radio that was clicked
         parentBox.classList.add("selected");
 
-        // Check the radio button inside this box
+        // to check the radio button inside this box
         const radioButton = parentBox.querySelector(
             '.option-content input[type="radio"]'
         );
@@ -34,12 +34,12 @@ function handleRadioClick(event) {
     }
 }
 
-// Add the event listener to all the radio buttons
+//Event listener to all the radio buttons
 radioButtons.forEach((radio) =>
     radio.addEventListener("click", handleRadioClick)
 );
 
-// Handle the box clicks to select the radio button inside
+// the box clicks to select the radio button inside
 boxes.forEach((box) => {
     box.addEventListener("click", (event) => {
         // If the clicked element wasn't the radio button itself

@@ -1,0 +1,206 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    /* full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    /* optional: gives a background color */
+}
+
+.product-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    gap: 5px;
+    margin: 6px 12px;
+    align-items: center;
+}
+
+.flex>select {
+    border: 0.5px solid #b5b5b5;
+    border-radius: 4px;
+    height: 24px;
+    font-size: 10px;
+    min-width: 65px;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.product-box {
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    margin: 20px;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.product-box.selected {
+    border-color: lightgreen;
+    background-color: #e8f5e9;
+    /* this is a light green */
+}
+
+.option-content {
+    display: flex;
+}
+
+.option-content>input {
+    margin-right: 15px;
+}
+
+.discount-label {
+    text-align: right;
+    font-family: MetropolisRegular;
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.discount-label>.popular-tag {
+    font-family: Inter;
+    font-size: 12px;
+    color: #007f61;
+    font-weight: 600;
+}
+
+.reveal-if-active {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.reveal-if-active.visible {
+    opacity: 1;
+    max-height: 200px;
+    /* you may need to adjust this value depending on the actual content height */
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 10px;
+    /* optional for spacing */
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    flex: 1;
+    height: 0.9px;
+    background-color: #c8c8c8;
+    /* or any color you prefer */
+    margin: 0 10px;
+}
+
+.section-divider-text {
+    color: #007f61;
+    font-size: 18px;
+    padding: 0 10px;
+    /* to provide some space between the text and lines */
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+
+.total-text {
+    font-size: 14px;
+    font-family: "Inter";
+}
+
+.total-text>span {
+    font-weight: 500;
+}
+
+.col-head {
+    width: 65px;
+}
+
+.col-head-row {
+    margin-left: 6px;
+}
+
+.option-label,
+.discount-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.striked-text {
+    display: flex;
+    align-items: flex-end;
+    font-size: 10px;
+    margin-left: 24px;
+    color: #9f9f9f;
+    text-decoration: line-through;
+}
+
+.tertiery-text {
+    font-size: 10px;
+    line-height: 18px;
+}
+
+.add-to-cart-btn {
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    max-width: 320px;
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background: #007f61;
+    color: white;
+}
+
+.primary-text {
+    letter-spacing: 0em;
+    font-family: Metropolis;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.secondary-text {
+    font-family: MetropolisRegular;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0em;
+}
+
+.shipping-text {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #007f61;
+}
+
+.copyright-text {
+    font-size: 10px;
+    text-align: right;
+    margin: 6px 20px;
+    font-weight: 100;
+}
+
+.copyright-text>span {
+    font-family: Metropolis;
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+    font-weight: 400;
+}

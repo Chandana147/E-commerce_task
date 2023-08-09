@@ -81,7 +81,7 @@ body {
 .reveal-if-active.visible {
     opacity: 1;
     max-height: 200px;
-    /* you may need to adjust this value depending on the actual content height */
+    /* this height changes depending on the actual content height */
 }
 
 .section-divider {
@@ -90,7 +90,7 @@ body {
     justify-content: center;
     text-align: center;
     margin: 20px 10px;
-    /* optional for spacing */
+    /* optional for  products display spacing */
 }
 
 .section-divider::before,
@@ -99,7 +99,7 @@ body {
     flex: 1;
     height: 0.9px;
     background-color: #c8c8c8;
-    /* or any color you prefer */
+    /* the greeen color showing the section */
     margin: 0 10px;
 }
 
